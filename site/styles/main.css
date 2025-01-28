@@ -1,0 +1,16 @@
+#author{
+  font-weight: 700;
+  font-style: italic;
+}
+
+#author-prefix::after {
+  content: ' ';
+  font-style: oblique;
+  font-size: x-large;
+  font-weight: 100;
+}
+
+.css-sc-logo {
+  width: 24;
+  height: 24;
+}
