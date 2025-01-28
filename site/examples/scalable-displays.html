@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../styles/main.css">
+  <title>Using Display Scaling & Density</title>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/site/index.html">Home</a></li>
+      <li>
+        <a href="index.html">Examples</a>
+        <ul>
+          <li><a href="search.html">Custom Search</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <p>Below is a demonstration on how to create responnsive content and display it to users:</p>
+  <picture>
+    <img src="../../assets/sc-logo/sc-logo.png">
+    <figcaption>Fig. 1 The original logo sc-logo.png</figcaption>
+  </picture>
+  <picture>
+    <source srcset="../../assets/sc-logo/sc-logo.svg">
+    <img srcset="../assets/sc-logo/sc-logo.png">
+    <figcaption>Fig. 2 SVG with fallback</figcaption>
+  </picture>
+  <picture>
+    <img src="../assets/sc-logo/sc-logo.svg" width="200" height="120">
+    <figcaption>Fig. 3 SVG without a fallback</figcaption>
+  </picture>
+  <picture>
+    <img class="css-sc-logo" src="../../assets/sc-logo/sc-logo.png">
+    <figcaption>Fig. 4 PNG styled with CSS</figcaption>
+  </picture>
+
+  <picture>
+    <source media="(max-width:200px)" srcset="../../assets/sc-logo/sc-logo_105.png">
+    <source media="(min-width:800px)" srcset="../../assets/sc-logo/sc-logo_140.png, ../../assets/sc-logo/sc-logo_140.png 2x">
+    <img src="../../assets/sc-logo/sc-logo.png" alt="Sault College Logo">
+    <figcaption>Fig. 5 using source to scale our images</figcaption>
+  </picture>
+
+  <iframe
+    width="125"
+    height="240"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin"
+    src="https://www.youtube.com/"
+    >
+  </iframe>
+
+  <!-- <video controls width="250" height="250" preload="metadata">
+    <source src="../../assets/Tue Jan 21-20250121_103948-Meeting Recording.mp4">
+    <track kind="captions" src="../../assets/Tue Jan 21.vtt" srclang="en-US">
+  </video>
+
+  <iframe 
+    width="560" 
+    height="315" 
+    src="https://www.youtube.com/embed/DlyjfI_4Yig?si=W_OciTlw4HXrDaH2" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
+  </iframe> -->
+
+</body>
