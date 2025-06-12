@@ -54,12 +54,6 @@ tableHeader.appendChild(thR2)
 
 const tableBody = document.createElement('tbody');
 function createTableBodyRow({parent, semester, code, name, hours, includeSemester = false}) {
-    // <tr>
-    //     <td rowSpan="2">25W</td>
-    //     <td>CSD-228</td>
-    //     <td>Mobile Applications</td>
-    //     <td>4</td>
-    // </tr>
     const row = document.createElement('tr');
     if (includeSemester) {
         const semesterNode = document.createElement('th');
@@ -69,11 +63,15 @@ function createTableBodyRow({parent, semester, code, name, hours, includeSemeste
     }
 
     const codeNode = document.createElement('td');
+    codeNode.setAttribute("class", "tt-course-code")
     codeNode.appendChild(document.createTextNode(code))
 
     row.appendChild(codeNode);
+
     const nameNode = document.createElement('td');
-    nameNode.appendChild(document.createTextNode(name))
+    nameNode.setAttribute("class", "tt-name")
+    const nameNodeContents = document.createTextNode(name)
+    nameNode.appendChild(nameNodeContents)
     nameNode.setAttribute('colspan', '10');
 
     row.appendChild(nameNode);
@@ -99,7 +97,7 @@ for (let courseIdx = 0; courseIdx < spring.length; courseIdx++) {
 const tableFooter = document.createElement('tfoot');
 const tFootLabel = document.createElement('th');
 tFootLabel.appendChild(document.createTextNode('Total Hours'));
-tFootLabel.setAttribute('colspan', '10')
+tFootLabel.setAttribute('colspan', '12')
 const tFRow = document.createElement('tr');
 tFRow.appendChild(tFootLabel);
 const totalHours = document.createElement('td');
